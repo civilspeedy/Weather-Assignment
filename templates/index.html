@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Weather Forcast</title>
+    <link href="static/css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1 >Today in Bournemouth it is:</h1>
+    <!--"output" is changed through the JS function "displayToTop()"-->
+    <p class="upperText" id="output"></p>
+
+    <!--This span is used to display the current time-->
+    <span id="span"></span><br>
+
+    <div class="entryGroup">
+      <!--these are the elements that are used to take in the weather data and the button will call the JS function "getData()"-->
+      <label for="date">Enter Date:</label><br>
+      <input type="date" id="date" name="date"><br>
+
+      <label>Enter Time:</label>
+      <input type="time" id="time" name="time"><br>
+
+      <label for="temperature">Enter Temperature:</label><br>
+      <input type="number" id="temperature" name="temperature"><br>
+      
+      <label for="weather type">Enter Weather Type:</label><br>
+      <select name="weather type" id="weather type">
+        <option value="Sunny">Sunny</option>
+        <option value="Cloudy">Cloudy</option>
+        <option value="Cloudy with Sun">Cloudy with Sun</option>
+        <option value="Sunny with Rain">Sunny with Rain</option>
+        <option value="Light Rain">Light Rain</option>
+        <option value="Heavy Rain">Heavy Rain</option>
+        <option value="Thin Fog">Thin Fog</option>
+        <option value="Thick Fog">Thick Fog</option>
+      </select><br>
+      
+      <label for="wind">Enter Wind Strength:</label><br>
+      <select name="wind" id="wind">
+        <option value="Strong">Strong</option>
+        <option value="Moderate">Moderate</option>
+        <option value="Light">Light</option>
+        <option value="Gusty">Gusty</option>
+        <option value="Flat">Flat</option>
+      </select><br>
+
+      <label for="Location">Enter Location:</label><br>
+      <select name="Location" id="location">
+        <option value="Bournemouth">Bournemouth</option>
+        <option value="Southbourne">Southbourne</option>
+        <option value="Christchurch">Christchurch</option>
+        <option value="Poole">Poole</option>
+        <option value="Wimbourne Minister">Wimbourne Minister</option>
+        <option value="Highcliffe">Highcliffe</option>
+        <option value="Mudford">Mudford</option>
+      </select><br>
+
+      <label for="duration"> Enter Duration(hrs):</label><br>
+      <select name="duration" id="duration">
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+        <option value=5>5</option>
+        <option value=6>6</option>
+        <option value=7>7</option>
+        <option value=8>8</option>
+        <option value=9>9</option>
+        <option value=10>10</option>
+        <option value=11>11</option>
+        <option value=12>12</option>
+      </select><br>
+
+      <br>
+      <button onclick="sendData()">Enter Data</button><br>
+    </div>
+    <div id="table-wrapper">
+      <div id="table-scroll">
+        <table>
+          <!--This table will display the reliavent weather data-->
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Starts</td>
+              <th>Ends</th>
+              <th>Location</th>
+              <th>Temp(°C)</th>
+              <th>Type</th>
+              <th>Wind</th>
+            </tr">
+          </thead>
+          <tbody id="table" class="table" ></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="deleteGroup">
+      <!--this div contains the elements that are used to remove weather entries-->
+      <label>Delete Entry:</label><br>
+      <label for="date2Remove">Enter Date:</label>
+      <input type="date" id="date2Remove" name="date2Remove" class="deleteInputs">
+
+      <label>Enter Time:</label>
+      <input type="time" id="time2Remove" name="time2Remove" class="deleteInputs">
+
+      <label for="location2Remove">Enter Location:</label>
+      <select name="location2Remove" id="location2Remove" class="deleteInputs">
+        <option value="Bournemouth">Bournemouth</option>
+        <option value="Southbourne">Southbourne</option>
+        <option value="Christchurch">Christchurch</option>
+        <option value="Poole">Poole</option>
+        <option value="Wimbourne Minister">Wimbourne Minister</option>
+        <option value="Highcliffe">Highcliffe</option>
+        <option value="Mudford">Mudford</option>
+      </select>
+
+      <button onclick="removeData()" style="background-color:red;border-color: crimson;">Delete</button>
+    </div>
+
+    <button onclick="resetJson()">Reset All Data</button><br>
+
+  <script src="static/js/script.js"></script>
+  </body>
+</html>

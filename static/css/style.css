@@ -1,0 +1,150 @@
+*{
+  font-family: 'Trebuchet MS';
+  background: black;
+  color: white;
+}
+
+body{
+  padding: 10px
+}
+
+p.displayData{
+  display: inline-block;
+  color:cyan;
+  margin: 0;
+}
+
+.deleteGroup{
+  display: inline-block;
+  width: 75%;
+  right:auto;
+}
+.deleteInputs{
+  width: 10%;
+}
+
+span{
+  font-size: 200%;
+  text-align: center;
+  align-content: center;
+  right: 50%;
+}
+button{
+  appearance: none;
+  background-color: cyan;
+  color: black;
+  font-size: 100%;
+  font-weight: bold;
+  padding: 10px 10px;
+  border-radius: 5px;
+  border-color: cyan;
+}
+
+.entryGroup {
+  width: auto;
+  border: 2px solid cyan;
+  position: relative;
+  left: auto;
+  margin: 0;
+  float: left;
+  border: crimson;
+  padding: 2px;
+}
+
+h1{
+  text-align: center;
+  font-size: 500%;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+h2{
+  font-size: 100%;
+}
+
+p{
+  text-align: center;
+  font-size: 100%;
+}
+
+label{
+  font-size: 100%;
+}
+
+
+input{
+  width: 60%;
+  border-color: cyan;
+  border-radius: 5px;
+}
+
+div {
+  border-radius: 5px;
+  text-align: center;
+  padding: 2px;
+}
+
+select {
+    outline: none !important;
+    border: 2px solid cyan;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    padding: 2px;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+p.upperText {
+  text-align: center;
+  font-size: 400%;
+  margin: 0;
+}
+
+table{
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  width: 80%;
+  font-size: 300%;
+  align-self: center;
+  height: 60%;
+  padding: 2px;
+}
+
+th{
+  padding-left: 2px; 
+  padding-right: 2px;
+  height: 100px;
+}
+
+tbody.table{
+  font-size: 75%;
+  height: 500px;
+  width: auto;
+}
+tr{
+  overflow-y: scroll;
+}
+td{
+  color: white;
+  border: 1px solid white;
+  background-color: #1c1c1c;
+  border-radius: 5px;
+  align-content: center;
+}
+
+span{
+  display: inline-block;
+}
+
+
+#table-scroll {
+  height:500px;
+  overflow:auto;  
+  margin-top:20px;
+}
